@@ -1,0 +1,177 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: justify;
+}
+
+main{
+    width: 80%;
+    margin: auto;
+    background-color: aqua;
+    margin-top: 50px;
+    /*flex padre*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+body{
+    background-image: url(imagenes/fondo.jpg);
+}
+
+header{
+    width: 100%;
+    background-color: #00b0f2;
+    padding: 20px;
+    /*flex padre*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo img{
+    width: 100px;
+    vertical-align: middle;
+}
+
+#logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+}
+
+#menu1{
+    width: 50%;
+    background-color: black;
+    /*flex padre*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#menu1 a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    /*flex hijo*/
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#menu1 a:hover{
+    background-color: beige;
+    color: black;
+}
+
+article{
+    background-color: white;
+    padding: 20px;
+    /*flex padre*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /*flex hijo*/
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 70%; 
+}
+
+.contenido{
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    /*flex hijo*/
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+aside{
+    background-color: black;
+    padding: 20px;
+    /*flex padre*/
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    /*flex hijo*/
+    flex: 1 1 30%;
+}
+
+.publicidad{
+    background-color: #00b0f2;
+    height: 150PX;
+    margin: 10px;
+    /*flex hijo*/
+    flex: 1 1;
+}
+
+footer{
+    width: 100%;
+    background-color: #00b0f2;
+    padding: 20px;
+    /*flex padre*/
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#menu2, #menu3{
+    background-color: black;
+    /*flex padre */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#menu2 a, #menu3 a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    /*flex hijo*/
+    flex: 1 1;
+}
+
+#menu2 a:hover, #menu3 a:hover{
+    background-color: beige;
+    color: black;
+}
+
+/* para tablet */
+@media (max-width:900px)
+{
+    main{
+        flex-direction: column;
+    }
+
+    header{
+        flex-direction: column;
+        padding: 0;
+    }
+
+    #menu1{
+        width: 100%;
+    }
+
+    aside{
+        flex-direction: row;
+    }
+
+    footer{
+        justify-content: center;
+    }
+}
+
+/*para celular*/
+@media (max-width:600px)
+{
+    aside{
+        flex-direction: column;
+    }
+}
